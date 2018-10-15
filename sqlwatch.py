@@ -8,6 +8,7 @@
 # 2018-10-13 Nereu Adding flag -l/--sqllist
 # 2018-10-14 Nereu Using git hub
 
+import six
 import argparse
 import getpass
 import re
@@ -44,7 +45,7 @@ if db_user == '' or db_pass == '':
 
   except ImportError as error:
      if db_user == '':
-       db_user=raw_input("Enter user-name: ")
+       db_user=six.moves.input('Enter user-name: ')
 
      if db_pass == '':
        db_pass=getpass.getpass(prompt='Enter password: ',stream=sys.stderr)
