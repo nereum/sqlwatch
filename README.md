@@ -26,6 +26,8 @@ $ cat test.sql
 select sysdate from dual;
 
 $ ./sqlwatch.py -s test.sql
+Enter user-name: system
+Enter password:
 
 Every 60s | 2018-10-14 12:12:57
 
@@ -44,6 +46,8 @@ Is possible to define the interval between executions using -n <interval>
 
 ``` shell
 $ ./sqlwatch.py -n 10 -s test.sql
+Enter user-name: system
+Enter password:
 
 Every 10s | 2018-10-14 12:13:10
 
