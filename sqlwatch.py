@@ -7,7 +7,7 @@
 # 2018-10-12 Nereu regexp SQL*Plus commands, DCLs and DMLs
 # 2018-10-13 Nereu Adding flag -l/--sqllist
 # 2018-10-14 Nereu Using git hub
-# 2018-10-29 Nereu credential revision
+# 2018-10-29 Nereu fixing
 
 import six
 import argparse
@@ -31,7 +31,6 @@ parser.add_argument('-s','--sqlfile',help='SQL*Plus script file',type=argparse.F
 
 args=parser.parse_args()
 
-
 try:
   import credentials
   db_user=credentials.db_user
@@ -52,8 +51,6 @@ if db_user == '':
 
 if db_pass == '':
   db_pass=getpass.getpass(prompt='Enter password: ',stream=sys.stderr)
-
-
 
 sqlplus_cmds_regexp=r'(^(@|\/|\--|#|accept|alter|analyze|append|archive|attribute|audit|begin|break|btitle|call|change|clear|column|comment|commit|compute|connect|copy|create|define|del|delete|describe|disconnect|drop|edit|end|execute|exit|explain|flash|get|grant|help|host|input|insert|list|lock|merge|noaudit|password|pause|print|prompt|purge|quit|recover|remark|repfooter|repheader|replace|rename|revoke|rollback|run|save|set|show|shutdown|spool|start|startup|store|timing|truncate|ttitle|undefine|update|variable|whenever)|(^$))'
 
