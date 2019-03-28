@@ -9,13 +9,13 @@
 # 2018-10-14 Nereu Using git hub
 # 2018-10-29 Nereu fixing
 
-import six
 import argparse
+from datetime import datetime as dt
 import getpass
 import re
+import six
 import sys
 import time
-from datetime import datetime as dt
 
 import cx_Oracle as DB
 from tabulate import tabulate
